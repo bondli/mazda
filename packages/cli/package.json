@@ -1,0 +1,30 @@
+{
+  "name": "@bondli/mazda",
+  "version": "0.1.0",
+  "description": "mazda CLI — AI Coding 工作流引擎",
+  "bin": {
+    "mazda": "./dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@bondli/mazda-core": "workspace:*",
+    "@bondli/mazda-claude-code": "workspace:*",
+    "@bondli/mazda-codex": "workspace:*",
+    "commander": "^12.0.0",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
+}

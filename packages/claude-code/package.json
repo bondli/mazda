@@ -1,0 +1,32 @@
+{
+  "name": "@bondli/mazda-claude-code",
+  "version": "0.1.0",
+  "description": "mazda 的 Claude Code 适配器：生成自定义命令文件",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/install.js",
+    "dist/install.js.map",
+    "dist/install.d.ts",
+    "dist/install.d.ts.map",
+    "dist/commands",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/copy-commands.js",
+    "copy-commands": "node scripts/copy-commands.js",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@bondli/mazda-core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
+}

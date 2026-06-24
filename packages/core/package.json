@@ -1,0 +1,35 @@
+{
+  "name": "@bondli/mazda-core",
+  "version": "0.1.0",
+  "description": "mazda 工作流核心：状态机、文件管理、类型定义",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/state.js",
+    "dist/state.js.map",
+    "dist/state.d.ts",
+    "dist/state.d.ts.map",
+    "dist/files.js",
+    "dist/files.js.map",
+    "dist/files.d.ts",
+    "dist/files.d.ts.map",
+    "dist/types.js",
+    "dist/types.js.map",
+    "dist/types.d.ts",
+    "dist/types.d.ts.map",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
+}

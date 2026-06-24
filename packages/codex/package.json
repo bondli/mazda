@@ -1,0 +1,30 @@
+{
+  "name": "@bondli/mazda-codex",
+  "version": "0.1.0",
+  "description": "mazda 的 Codex 适配器：注入 AGENTS.md 工作流指令",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/install.js",
+    "dist/install.js.map",
+    "dist/install.d.ts",
+    "dist/install.d.ts.map",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@bondli/mazda-core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
+}
