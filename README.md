@@ -368,6 +368,15 @@ pnpm check   # build + lint + test
 
 `@bondli/mazda` CLI 依赖 `@bondli/mazda-core`、`@bondli/mazda-claude-code` 和 `@bondli/mazda-codex`。发布到 npm 时需要四个 workspace 包保持相同版本并同步发布，确保 `npx @bondli/mazda init` 能解析到对应版本的内部包。
 
+根目录 `package.json` 是 `private` monorepo 管理包，不作为 npm 包发布，因此不要在根目录直接执行 `pnpm publish`。直接执行会尝试发布根包，并因为根包没有 `version` 字段而报错：`ERR_PNPM_PACKAGE_VERSION_NOT_FOUND`。
+
+整体发包请使用：
+
+```bash
+pnpm publish:packages:dry-run  # 发布前检查四个 workspace 包的产物
+pnpm publish:packages          # 递归发布所有非 private workspace 包
+```
+
 ---
 
 ## License
